@@ -18,4 +18,4 @@ Change the mapapps.remote.base in the build.properties file and run:
 
 Installation Guide
 ------------------
-- Just add the bundle "dn_analysis_counting" to your app.
+- Just add the bundle "dn_analysiscounting" to your app.
