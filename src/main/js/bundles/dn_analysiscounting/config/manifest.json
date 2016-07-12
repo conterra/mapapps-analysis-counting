@@ -1,0 +1,124 @@
+{
+  "Bundle-SymbolicName": "dn_analysiscounting-config",
+  "Bundle-Version": "1.0.0-SNAPSHOT",
+  "Bundle-Name": "${bundleName}",
+  "Bundle-Description": "${bundleDescription}",
+  "Bundle-Vendor": "con terra GmbH",
+  "Require-Bundle": [
+    {
+      "name": "dataform"
+    },
+    {
+      "name": "wizard"
+    }
+  ],
+  "Components": [
+    {
+      "name": "BuilderEntry",
+      "impl": "ct/Stateful",
+      "provides": [
+        "wizard.MenuEntry"
+      ],
+      "propertiesConstructor": true,
+      "properties": {
+        "parentNodeId": "appBuilderToolsNode",
+        "menuNode": {
+          "title": "${windowTitle}",
+          "description": "${description}",
+          "iconUrl": "resource('styles/images/bundleIcon.png')",
+          "children": [
+            {
+              "title": "${ui.whereStoreSelection.menuTitle}",
+              "iconUrl": "resource('styles/images/selectfeaturefromlayer.png')",
+              "widget": "whereStoreSelectionWidget",
+              "priority": -1
+            },
+
+            {
+              "title": "${ui.whatStoreSelection.menuTitle}",
+              "iconUrl": "resource('styles/images/freehand.png')",
+              "widget": "whatStoreSelectionWidget",
+              "priority": -2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "WhereStoreSelection",
+      "provides": [
+        "dijit.wizard.Widget"
+      ],
+      "immediate": true,
+      "instanceFactory": true,
+      "properties": {
+        "widgetProperties": {
+          "bid": "dn_analysiscounting",
+          "pid": "dn_analysiscounting-CountingWidgetFactory",
+          "id": "whereStoreSelectionWidget"
+        },
+        "defaultProperties": {
+          "whereStoreIds": [
+          ],
+          "whatStoreIds": [
+          ]
+        },
+        "description": "${ui.whereStoreSelection.description}"
+      },
+      "references": [
+        {
+          "name": "_configAdminService",
+          "providing": "ct.framework.api.ConfigurationAdmin"
+        },
+        {
+          "name": "_dataformService",
+          "providing": "dataform.DataFormService"
+        },
+        {
+          "name": "selectionStore",
+          "providing": "ct.api.Store",
+          "cardinality": "1..n",
+          "filter": "(useIn=selection)"
+        }
+      ]
+    },
+    {
+      "name": "WhatStoreSelection",
+      "provides": [
+        "dijit.wizard.Widget"
+      ],
+      "immediate": true,
+      "instanceFactory": true,
+      "properties": {
+        "widgetProperties": {
+          "bid": "dn_analysiscounting",
+          "pid": "dn_analysiscounting-CountingWidgetFactory",
+          "id": "whatStoreSelectionWidget"
+        },
+        "defaultProperties": {
+          "whereStoreIds": [
+          ],
+          "whatStoreIds": [
+          ]
+        },
+        "description": "${ui.whereStoreSelection.description}"
+      },
+      "references": [
+        {
+          "name": "_configAdminService",
+          "providing": "ct.framework.api.ConfigurationAdmin"
+        },
+        {
+          "name": "_dataformService",
+          "providing": "dataform.DataFormService"
+        },
+        {
+          "name": "selectionStore",
+          "providing": "ct.api.Store",
+          "cardinality": "1..n",
+          "filter": "(useIn=selection)"
+        }
+      ]
+    }
+  ]
+}

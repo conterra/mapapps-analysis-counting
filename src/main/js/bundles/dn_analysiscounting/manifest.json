@@ -1,0 +1,134 @@
+{
+  "Bundle-SymbolicName": "dn_analysiscounting",
+  "Bundle-Version": "1.0.0-SNAPSHOT",
+  "Bundle-Name": "${bundleName}",
+  "Bundle-Description": "${bundleDescription}",
+  "Bundle-Vendor": "con terra GmbH",
+  "Product-Name": "con terra Developer Network",
+  "Config-Bundle-Location": "/config",
+  "Require-Bundle": [
+    {
+      "name": "map"
+    },
+    {
+      "name": "agssearch"
+    },
+    {
+      "name": "resultcenter"
+    }
+  ],
+  "CSS-Themes-Extension": [
+    {
+      "name": "*",
+      "files": [
+        "./styles/styles.css"
+      ]
+    }
+  ],
+  "layout-widgets": [
+    {
+      "role": "analysisCountingWidget",
+      "window": {
+        "title": "${windowTitle}",
+        "marginBox": {
+          "w": 250,
+          "h": 160
+        },
+        "dockTool": "analysisCountingTool",
+        "closable": true,
+        "minimizeOnClose": true,
+        "resizable": false
+      }
+    }
+  ],
+  "Components": [
+    {
+      "name": "CountingWidgetFactory",
+      "provides": [
+        "dijit.Widget",
+        "ct.framework.api.EventHandler"
+      ],
+      "properties": {
+        "widgetRole": "analysisCountingWidget",
+        "whereStoreIds": [
+        ],
+        "whatStoreIds": [
+        ]
+      },
+      "instanceFactory": true,
+      "immediate": true,
+      "references": [
+        {
+          "name": "store",
+          "providing": "ct.api.Store",
+          "cardinality": "1..n",
+          "filter": "(useIn=selection)"
+        },
+        {
+          "name": "_mapState",
+          "providing": "ct.mapping.map.MapState",
+          "policy": "static"
+        },
+        {
+          "name": "_tool",
+          "providing": "ct.tools.Tool",
+          "filter": "(id=analysisCountingTool)"
+        },
+        {
+          "name": "_dataModel",
+          "providing": "ct.resultcenter.DataModel"
+        },
+        {
+          "name": "_drawGeometryHandler",
+          "providing": "dn_analysiscounting.DrawGeometryHandler"
+        },
+        {
+          "name": "_map",
+          "providing": "ct.mapping.map.Map"
+        },
+        {
+          "name": "_windowManager",
+          "providing": "ct.framework.api.WindowManager"
+        }
+      ]
+    },
+    {
+      "name": "${toolName}",
+      "impl": "ct/tools/Tool",
+      "provides": [
+        "ct.tools.Tool"
+      ],
+      "propertiesConstructor": true,
+      "properties": {
+        "id": "analysisCountingTool",
+        "toolRole": "toolset",
+        "title": "${toolName}",
+        "tooltip": "${toolTooltip}",
+        "togglable": true,
+        "iconClass": "icon-add-symbol"
+      }
+    },
+    {
+      "name": "DrawGeometryHandler",
+      "provides": "dn_analysiscounting.DrawGeometryHandler",
+      "references": [
+        {
+          "name": "_eventService",
+          "providing": "ct.framework.api.EventService"
+        },
+        {
+          "name": "_drawController",
+          "providing": "ct.mapping.edit.DrawStateController"
+        },
+        {
+          "name": "_mapModel",
+          "providing": "ct.mapping.map.MapModel"
+        },
+        {
+          "name": "_logService",
+          "providing": "ct.framework.api.LogService"
+        }
+      ]
+    }
+  ]
+}
