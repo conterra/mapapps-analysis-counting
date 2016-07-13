@@ -57,7 +57,7 @@
           "omniSearchLabelAttr": "RS",
           "omniSearchSearchAttr": "RS",
           "idProperty": "OBJECTID",
-          "url": "https://services.arcgis.com/OLiydejKCZTGhvWg/ArcGIS/rest/services/Bundesländergrenzen_2015_Statistik/FeatureServer/0",
+          "url": "http://services.arcgis.com/OLiydejKCZTGhvWg/ArcGIS/rest/services/Bundesländergrenzen_2015_Statistik/FeatureServer/0",
           "useIn": [
             "omnisearch",
             "selection"
@@ -78,7 +78,7 @@
           "omniSearchLabelAttr": "RS",
           "omniSearchSearchAttr": "RS",
           "idProperty": "OBJECTID",
-          "url": "https://services.arcgis.com/OLiydejKCZTGhvWg/ArcGIS/rest/services/Kreisegrenzen_2015_Statistik/FeatureServer/0",
+          "url": "http://services.arcgis.com/OLiydejKCZTGhvWg/ArcGIS/rest/services/Kreisegrenzen_2015_Statistik/FeatureServer/0",
           "useIn": [
             "omnisearch",
             "selection"
@@ -99,7 +99,7 @@
           "omniSearchLabelAttr": "RS",
           "omniSearchSearchAttr": "RS",
           "idProperty": "OBJECTID",
-          "url": "https://services.arcgis.com/OLiydejKCZTGhvWg/ArcGIS/rest/services/Gemeindegrenzen_2015/FeatureServer/0",
+          "url": "http://services.arcgis.com/OLiydejKCZTGhvWg/ArcGIS/rest/services/Gemeindegrenzen_2015/FeatureServer/0",
           "useIn": [
             "omnisearch",
             "selection"
