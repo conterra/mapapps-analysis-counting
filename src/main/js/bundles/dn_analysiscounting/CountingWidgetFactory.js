@@ -85,7 +85,12 @@ define([
             var gStore = this._getSelectedStoreObj(this.widget.getSelectedWhereStore());
             var cvStore = this._getSelectedStoreObj(this.widget.getSelectedWhatStore());
             var extent = this._mapState.getExtent();
-            ct_when(gStore.query({geometry: {$intersects: extent}}, {fields: {"geometry": true}}), function (result) {
+            ct_when(gStore.query({geometry: {$intersects: extent}}, {
+                fields: {
+                    "geometry": true,
+                    "objectid": 1
+                }
+            }), function (result) {
                 d_array.forEach(result, function (feature) {
                     var geom = feature.geometry;
                     this._drawGeometryHandler.drawGeometry(geom);
