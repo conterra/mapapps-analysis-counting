@@ -113,6 +113,90 @@
           "fetchIdProperty": true,
           "enablePagination": false,
           "id": "_AGS_STORE_1447515368626"
+        },
+        {
+          "title": "World Cities (World_Cities)",
+          "description": "",
+          "omniSearchLabelAttr": "CITY_NAME",
+          "omniSearchSearchAttr": "CITY_NAME",
+          "idProperty": "FID",
+          "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/World_Cities/FeatureServer/0",
+          "useIn": [
+            "omnisearch",
+            "selection"
+          ],
+          "filterOptions": {
+            "suggestContains": true
+          },
+          "omniSearchTypingDelay": 500,
+          "omniSearchPageSize": 20,
+          "omniSearchDefaultLabel": "Suchbegriff eingeben...",
+          "fetchIdProperty": true,
+          "enablePagination": false,
+          "id": "_AGS_STORE_1469026369117"
+        },
+        {
+          "title": "World Countries (World_Countries)",
+          "description": "",
+          "omniSearchLabelAttr": "COUNTRY",
+          "omniSearchSearchAttr": "COUNTRY",
+          "idProperty": "FID",
+          "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Countries/FeatureServer/0",
+          "useIn": [
+            "omnisearch",
+            "selection"
+          ],
+          "filterOptions": {
+            "suggestContains": true
+          },
+          "omniSearchTypingDelay": 500,
+          "omniSearchPageSize": 20,
+          "omniSearchDefaultLabel": "Suchbegriff eingeben...",
+          "fetchIdProperty": true,
+          "enablePagination": false,
+          "id": "_AGS_STORE_1469027163329"
+        },
+        {
+          "title": "World Continents (World_Continents)",
+          "description": "",
+          "omniSearchLabelAttr": "CONTINENT",
+          "omniSearchSearchAttr": "CONTINENT",
+          "idProperty": "FID",
+          "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Continents/FeatureServer/0",
+          "useIn": [
+            "omnisearch",
+            "selection"
+          ],
+          "filterOptions": {
+            "suggestContains": true
+          },
+          "omniSearchTypingDelay": 500,
+          "omniSearchPageSize": 20,
+          "omniSearchDefaultLabel": "Suchbegriff eingeben...",
+          "fetchIdProperty": true,
+          "enablePagination": false,
+          "id": "_AGS_STORE_1469027174072"
+        },
+        {
+          "title": "World Regions (World_Regions)",
+          "description": "",
+          "omniSearchLabelAttr": "REGION",
+          "omniSearchSearchAttr": "REGION",
+          "idProperty": "FID",
+          "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Regions/FeatureServer/0",
+          "useIn": [
+            "omnisearch",
+            "selection"
+          ],
+          "filterOptions": {
+            "suggestContains": true
+          },
+          "omniSearchTypingDelay": 500,
+          "omniSearchPageSize": 20,
+          "omniSearchDefaultLabel": "Suchbegriff eingeben...",
+          "fetchIdProperty": true,
+          "enablePagination": false,
+          "id": "_AGS_STORE_1469027182634"
         }
       ],
       "enabled": true
@@ -143,10 +227,16 @@
     "dn_analysiscounting": {
       "CountingWidgetFactory": {
         "whereStoreIds": [
-          "_AGS_STORE_1447515012761"
+          "_AGS_STORE_1447515012761",
+          "_AGS_STORE_1447515265638",
+          "_AGS_STORE_1447515368626",
+          "_AGS_STORE_1469027163329",
+          "_AGS_STORE_1469027174072",
+          "_AGS_STORE_1469027182634"
         ],
         "whatStoreIds": [
-          "_AGS_STORE_1446801354388"
+          "_AGS_STORE_1446801354388",
+          "_AGS_STORE_1469026369117"
         ]
       }
     },
@@ -179,6 +269,21 @@
                   "layers": [
                     "*"
                   ]
+                },
+                {
+                  "title": "World Cities",
+                  "enabled": true,
+                  "service": "service_99120",
+                  "category": {
+                    "title": "World Cities",
+                    "description": "",
+                    "imgUrl": ""
+                  },
+                  "layers": [
+                    "*"
+                  ],
+                  "id": "service_99120_1469026674164",
+                  "options": {}
                 }
               ],
               "baseLayer": [
@@ -394,6 +499,66 @@
                   "id": "6",
                   "title": "Bathing water quality",
                   "minScale": 200000,
+                  "enabled": true
+                }
+              ],
+              "options": {}
+            },
+            {
+              "id": "service_99120",
+              "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/World_Cities/FeatureServer",
+              "type": "AGS_FEATURE",
+              "title": "World Cities",
+              "description": "",
+              "layers": [
+                {
+                  "id": "0",
+                  "title": "World_Cities",
+                  "enabled": true
+                }
+              ],
+              "options": {}
+            },
+            {
+              "id": "service_63588",
+              "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Countries/FeatureServer",
+              "type": "AGS_FEATURE",
+              "title": "World Countries",
+              "description": "",
+              "layers": [
+                {
+                  "id": "0",
+                  "title": "World_Countries",
+                  "enabled": true
+                }
+              ],
+              "options": {}
+            },
+            {
+              "id": "service_70883",
+              "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Continents/FeatureServer",
+              "type": "AGS_FEATURE",
+              "title": "World Continents",
+              "description": "",
+              "layers": [
+                {
+                  "id": "0",
+                  "title": "World_Continents",
+                  "enabled": true
+                }
+              ],
+              "options": {}
+            },
+            {
+              "id": "service_64259",
+              "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Regions/FeatureServer",
+              "type": "AGS_FEATURE",
+              "title": "World Regions",
+              "description": "",
+              "layers": [
+                {
+                  "id": "0",
+                  "title": "World_Regions",
                   "enabled": true
                 }
               ],
