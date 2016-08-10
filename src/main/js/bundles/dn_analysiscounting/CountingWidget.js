@@ -121,8 +121,8 @@ define([
         getSelectedWhatStore: function () {
             return this._filteringSelect2.get("value");
         },
-        _onDone: function () {
-            this.source.onDone();
+        _onCount: function () {
+            this.source.onCount();
         },
         _onClear: function () {
             this.source.onClear();

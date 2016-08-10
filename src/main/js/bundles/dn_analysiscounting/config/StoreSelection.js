@@ -13,24 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-define(["dojo/_base/lang", "dojo/_base/declare", "dojo/_base/array", "ct/_lang", "ct/_Connect", "ct/array", "ct/Exception", "ct/_string", "./WhereStoreSelectionWidget", "ct/store/ComplexMemory", "ct/_when"],
-    function (d_lang, declare, d_array, ct_lang, _Connect, ct_array, Exception, ct_string, WhereStoreSelectionWidget, ComplexMemoryStore, ct_when) {
+define(["dojo/_base/lang", "dojo/_base/declare", "dojo/_base/array", "ct/_lang", "ct/_Connect", "ct/array", "ct/Exception", "ct/_string", "./StoreSelectionWidget", "ct/store/ComplexMemory", "ct/_when"],
+    function (d_lang, declare, d_array, ct_lang, _Connect, ct_array, Exception, ct_string, StoreSelectionWidget, ComplexMemoryStore, ct_when) {
         return declare([_Connect],
             {
                 createInstance: function () {
-                    var configStore = this._getConfigStore();
-                    var i18n = this._i18n.get().ui.whereStoreSelection;
+                    var whereConfigStore = this._getWhereConfigStore();
+                    var whatConfigStore = this._getWhatConfigStore();
+                    var i18n = this._i18n.get().ui.storeSelection;
                     var properties = this._properties || {};
                     var opts = d_lang.mixin({
                         i18n: i18n,
                         configAdminService: this._configAdminService,
-                        configStore: configStore,
+                        whereConfigStore: whereConfigStore,
+                        whatConfigStore: whatConfigStore,
                         config: this._getComponentConfig()
                     }, properties.widgetProperties);
-                    var widget = this._widget = new WhereStoreSelectionWidget(opts);
-                    this.connectP("model", widget._viewModel, "selectedIds", function (type, oldVal, newVal) {
+                    var widget = this._widget = new StoreSelectionWidget(opts);
+                    this.connectP("model", widget._whatViewModel, "selectedIds", function (type, oldVal, newVal) {
+                        var whereStoreIds = this._getComponentConfig().properties.whereStoreIds;
+                        debugger
                         widget.fireConfigChangeEvent({
-                            whereStoreIds: newVal
+                            whatStoreIds: newVal,
+                            whereStoreIds: whereStoreIds
+                        });
+                    });
+                    this.connectP("model", widget._whereViewModel, "selectedIds", function (type, oldVal, newVal) {
+                        var whatStoreIds = this._getComponentConfig().properties.whatStoreIds;
+                        widget.fireConfigChangeEvent({
+                            whereStoreIds: newVal,
+                            whatStoreIds: whatStoreIds
                         });
                     });
                     return widget;
@@ -52,7 +64,8 @@ define(["dojo/_base/lang", "dojo/_base/declare", "dojo/_base/array", "ct/_lang",
                 },
                 destroyInstance: function (instance) {
                     this.disconnect();
-                    this._configStore = null;
+                    this._whatConfigStore = null;
+                    this._whereConfigStore = null;
                     var window = this._window;
                     if (window) {
                         window.close();
@@ -61,10 +74,10 @@ define(["dojo/_base/lang", "dojo/_base/declare", "dojo/_base/array", "ct/_lang",
                     this._widget = null;
                     instance.destroyRecursive();
                 },
-                _getConfigStore: function () {
-                    var i18n = this._i18n.get().ui.whereStoreSelection;
-                    if (!this._configStore) {
-                        var store = this._configStore = new ComplexMemoryStore({
+                _getWhatConfigStore: function () {
+                    var i18n = this._i18n.get().ui.storeSelection;
+                    if (!this._whatConfigStore) {
+                        var store = this._whatConfigStore = new ComplexMemoryStore({
                             data: [],
                             idProperty: "id"
                         });
@@ -87,14 +100,50 @@ define(["dojo/_base/lang", "dojo/_base/declare", "dojo/_base/array", "ct/_lang",
                             };
                         };
                     }
-                    return this._configStore;
+                    return this._whatConfigStore;
+                },
+                _getWhereConfigStore: function () {
+                    var i18n = this._i18n.get().ui.storeSelection;
+                    if (!this._whereConfigStore) {
+                        var store = this._whereConfigStore = new ComplexMemoryStore({
+                            data: [],
+                            idProperty: "id"
+                        });
+                        store.getMetadata = function () {
+                            return {
+                                fields: [{
+                                    "title": "id",
+                                    "name": "id",
+                                    "type": "string",
+                                    "identifier": true
+                                }, {
+                                    "title": i18n.grid.title,
+                                    "name": "title",
+                                    "type": "string"
+                                }, {
+                                    "title": i18n.grid.description,
+                                    "name": "description",
+                                    "type": "string"
+                                }]
+                            };
+                        };
+                    }
+                    return this._whereConfigStore;
                 },
                 addSelectionStore: function (service, properties) {
-                    var configStore = this._getConfigStore();
+                    var whatConfigStore = this._getWhatConfigStore();
+                    var whereConfigStore = this._getWhereConfigStore();
                     ct_when(service.getMetadata(), function (data) {
+                        if (!whatConfigStore.get(properties.id)) {
+                            whatConfigStore.add({
+                                "id": properties.id,
+                                "title": properties.title,
+                                "description": properties.description
+                            });
+                        }
                         if (data.geometryType === "esriGeometryPolygon")
-                            if (!configStore.get(properties.id)) {
-                                configStore.add({
+                            if (!whereConfigStore.get(properties.id)) {
+                                whereConfigStore.add({
                                     "id": properties.id,
                                     "title": properties.title,
                                     "description": properties.description

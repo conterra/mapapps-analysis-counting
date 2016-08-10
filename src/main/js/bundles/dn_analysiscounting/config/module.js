@@ -17,8 +17,6 @@ define([
     ".",
     "wizard/DataFormBuilderWidgetFactory",
     "wizard/_BuilderWidget",
-    "./WhereStoreSelection",
-    "./WhereStoreSelectionWidget",
-    "./WhatStoreSelection",
-    "./WhatStoreSelectionWidget"
+    "./StoreSelection",
+    "./StoreSelectionWidget"
 ], {});

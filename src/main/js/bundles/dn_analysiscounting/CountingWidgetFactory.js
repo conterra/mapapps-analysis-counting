@@ -64,7 +64,8 @@ define([
             widget.resize();
 
             this.connect(this._tool, "onDeactivate", function () {
-                this._drawGeometryHandler.clearGraphics();
+                if (this._drawGeometryHandler)
+                    this._drawGeometryHandler.clearGraphics();
             });
         },
         _getSelectedStoreObj: function (id) {
@@ -79,7 +80,7 @@ define([
         addStore: function (store, serviceproperties) {
             this.stores.push(store);
         },
-        onDone: function () {
+        onCount: function () {
             this._setProcessing(true);
             this._drawGeometryHandler.clearGraphics();
             var gStore = this._getSelectedStoreObj(this.widget.getSelectedWhereStore());
@@ -94,7 +95,7 @@ define([
                 d_array.forEach(result, function (feature) {
                     var geom = feature.geometry;
                     this._drawGeometryHandler.drawGeometry(geom);
-                    var deferred = cvStore.query({geometry: {$intersects: geom}}, {count: 0}).total;
+                    var deferred = cvStore.query({geometry: {$intersects: geom}}, {count: 0});
                     ct_when(deferred, function (count) {
                         this._drawGeometryHandler.drawDistanceText(geom, count.toString());
                         this._setProcessing(false);

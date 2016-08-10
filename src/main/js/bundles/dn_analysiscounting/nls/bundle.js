@@ -22,7 +22,7 @@ define({
         windowTitle: "Analysis / Counting",
         where: "Where?",
         what: "What?",
-        search: "Count",
+        count: "Count",
         clear: "Clear"
     },
     de: true

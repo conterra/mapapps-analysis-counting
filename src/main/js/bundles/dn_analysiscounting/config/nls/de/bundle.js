@@ -20,23 +20,16 @@ define({
     description: "Einstellungen f\u00fcr das Analysis / Counting Bundle",
     ui: {
         searchStore: "Suchstores",
-        whereStoreSelection: {
-            menuTitle: "\"Wo\" Suchstores",
-            description: "\"Wo\" Suchstores konfigurieren",
+        storeSelection: {
+            menuTitle: "Suchstores",
+            description: "Suchstores konfigurieren",
             grid: {
                 "title": "Titel",
                 "description": "Beschreibung"
             },
-            hint: "Bitte w\u00E4hlen Sie die Stores aus, die f\u00FCr die \"Wo?\" Auswahl zur Verf\u00FCgung stehen sollen"
-        },
-        whatStoreSelection: {
-            menuTitle: "\"Was\" Suchstores",
-            description: "\"Was\" Suchstores konfigurieren",
-            grid: {
-                "title": "Titel",
-                "description": "Beschreibung"
-            },
-            hint: "Bitte w\u00E4hlen Sie die Stores aus, die f\u00FCr die \"Was?\" Auswahl zur Verf\u00FCgung stehen sollen"
+            hint: "Bitte w\u00E4hlen Sie die Stores aus, die zur Auswahl stehen sollen",
+            whereTab: "\"Wo\" Stores",
+            whatTab: "\"Was\" Stores"
         }
     }
 });

@@ -21,23 +21,16 @@ define({
         description: "Settings for the Analysis / Counting bundle",
         ui: {
             searchStore: "Searchstores",
-            whereStoreSelection: {
-                menuTitle: "Where Search Stores",
-                description: "Configure Where Search Stores",
+            storeSelection: {
+                menuTitle: "Search Stores",
+                description: "Configure Search Stores",
                 grid: {
                     "title": "Title",
                     "description": "Description"
                 },
-                hint: "Please specify where search stores"
-            },
-            whatStoreSelection: {
-                menuTitle: "What Search Stores",
-                description: "Configure What Search Stores",
-                grid: {
-                    "title": "Title",
-                    "description": "Description"
-                },
-                hint: "Please specify what search stores"
+                hint: "Please specify search stores",
+                whereTab: "\"Where\" Stores",
+                whatTab: "\"What\" Stores"
             }
         }
     },

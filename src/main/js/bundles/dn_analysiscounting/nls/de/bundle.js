@@ -21,6 +21,6 @@ define({
     windowTitle: "Analyse / Z\u00e4hlung",
     where: "Wo?",
     what: "Was?",
-    search: "Z\u00e4hlen",
+    count: "Z\u00e4hlen",
     clear: "Zur\u00fccksetzen"
 });

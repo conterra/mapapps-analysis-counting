@@ -26,26 +26,12 @@
           "title": "${windowTitle}",
           "description": "${description}",
           "iconUrl": "resource('styles/images/bundleIcon.png')",
-          "children": [
-            {
-              "title": "${ui.whereStoreSelection.menuTitle}",
-              "iconUrl": "resource('styles/images/selectfeaturefromlayer.png')",
-              "widget": "whereStoreSelectionWidget",
-              "priority": -1
-            },
-
-            {
-              "title": "${ui.whatStoreSelection.menuTitle}",
-              "iconUrl": "resource('styles/images/freehand.png')",
-              "widget": "whatStoreSelectionWidget",
-              "priority": -2
-            }
-          ]
+          "widget": "storeSelectionWidget"
         }
       }
     },
     {
-      "name": "WhereStoreSelection",
+      "name": "StoreSelection",
       "provides": [
         "dijit.wizard.Widget"
       ],
@@ -55,7 +41,7 @@
         "widgetProperties": {
           "bid": "dn_analysiscounting",
           "pid": "dn_analysiscounting-CountingWidgetFactory",
-          "id": "whereStoreSelectionWidget"
+          "id": "storeSelectionWidget"
         },
         "defaultProperties": {
           "whereStoreIds": [
@@ -63,45 +49,7 @@
           "whatStoreIds": [
           ]
         },
-        "description": "${ui.whereStoreSelection.description}"
-      },
-      "references": [
-        {
-          "name": "_configAdminService",
-          "providing": "ct.framework.api.ConfigurationAdmin"
-        },
-        {
-          "name": "_dataformService",
-          "providing": "dataform.DataFormService"
-        },
-        {
-          "name": "selectionStore",
-          "providing": "ct.api.Store",
-          "cardinality": "1..n",
-          "filter": "(useIn=selection)"
-        }
-      ]
-    },
-    {
-      "name": "WhatStoreSelection",
-      "provides": [
-        "dijit.wizard.Widget"
-      ],
-      "immediate": true,
-      "instanceFactory": true,
-      "properties": {
-        "widgetProperties": {
-          "bid": "dn_analysiscounting",
-          "pid": "dn_analysiscounting-CountingWidgetFactory",
-          "id": "whatStoreSelectionWidget"
-        },
-        "defaultProperties": {
-          "whereStoreIds": [
-          ],
-          "whatStoreIds": [
-          ]
-        },
-        "description": "${ui.whereStoreSelection.description}"
+        "description": "${ui.storeSelection.description}"
       },
       "references": [
         {

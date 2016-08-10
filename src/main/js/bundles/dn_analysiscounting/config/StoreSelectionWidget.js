@@ -45,25 +45,28 @@ define(["dojo/_base/declare",
         },
         postCreate: function (opts) {
             this.inherited(arguments);
-            var model = this._viewModel = new DataViewModel({
-                store: this.configStore
+            var whatModel = this._whatViewModel = new DataViewModel({
+                store: this.whatConfigStore
             });
-            var dataView = this._dataView = this._createDataView();
-            dataView.startup();
-            dataView.set("model", model);
-            model.set("selectedIds", this.config.properties && this.config.properties.whatStoreIds ? this.config.properties.whatStoreIds : []);
-            this.storeSelection.set("content", dataView);
-            this.connect(this.enableState, "onChange", function (value) {
-                this.fireConfigChangeEvent({
-                    widgetEnabled: value
-                });
+            var whereModel = this._whereViewModel = new DataViewModel({
+                store: this.whereConfigStore
             });
+            var whatDataView = this._whatCataView = this._createDataView();
+            whatDataView.startup();
+            whatDataView.set("model", whatModel);
+            var whereDataView = this._whereDataView = this._createDataView();
+            whereDataView.startup();
+            whereDataView.set("model", whereModel);
+            whatModel.set("selectedIds", this.config.properties && this.config.properties.whatStoreIds ? this.config.properties.whatStoreIds : []);
+            whereModel.set("selectedIds", this.config.properties && this.config.properties.whereStoreIds ? this.config.properties.whereStoreIds : []);
+            this.whatStoreSelection.set("content", whatDataView);
+            this.whereStoreSelection.set("content", whereDataView);
         },
         resize: function (dim) {
             if (dim && dim.h > 0) {
                 this.rootContainer.resize({
                     w: dim.w,
-                    h: dim.h
+                    h: dim.h - 80
                 });
             }
         },
@@ -107,9 +110,11 @@ define(["dojo/_base/declare",
         },
         uninitialize: function () {
             this.disconnect();
-            this._dataView.destroyRecursive();
-            this._dataView = null;
-            this._dataModel = null;
+            this._whatDataView.destroyRecursive();
+            this._whatDataView = null;
+            this._whereDataView.destroyRecursive();
+            this._whereDataView = null;
+            //this._dataModel = null;
             this.inherited(arguments);
         },
         updateGrid: function () {

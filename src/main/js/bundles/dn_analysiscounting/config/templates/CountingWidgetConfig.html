@@ -2,8 +2,14 @@
     <div data-dojo-attach-point="rootContainer" data-dojo-type="dijit/layout/BorderContainer"
          data-dojo-props="design:'sidebar', gutters:false, liveSplitters:false">
         <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center', splitter:false">
-            <div data-dojo-attach-point="storeSelection" data-dojo-type="dijit/layout/ContentPane"
-                 data-dojo-props="'class':'builderStoreSelection noVerticalPadding'"></div>
+            <div data-dojo-type="dijit/layout/TabContainer" data-dojo-attach-point="contentNode">
+                <div data-dojo-attach-point="whereStoreSelection" title="${i18n.whereTab}"
+                     data-dojo-type="dijit/layout/ContentPane"
+                     data-dojo-props="'class':'builderStoreSelection noVerticalPadding'"></div>
+                <div data-dojo-attach-point="whatStoreSelection" title="${i18n.whatTab}"
+                     data-dojo-type="dijit/layout/ContentPane"
+                     data-dojo-props="'class':'builderStoreSelection noVerticalPadding'"></div>
+            </div>
         </div>
     </div>
 </div>
