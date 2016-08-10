@@ -95,7 +95,7 @@ define([
                 d_array.forEach(result, function (feature) {
                     var geom = feature.geometry;
                     this._drawGeometryHandler.drawGeometry(geom);
-                    var deferred = cvStore.query({geometry: {$intersects: geom}}, {count: 0});
+                    var deferred = cvStore.query({geometry: {$intersects: geom}}, {count: 0}).total;
                     ct_when(deferred, function (count) {
                         this._drawGeometryHandler.drawDistanceText(geom, count.toString());
                         this._setProcessing(false);

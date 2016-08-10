@@ -51,7 +51,7 @@ define(["dojo/_base/declare",
             var whereModel = this._whereViewModel = new DataViewModel({
                 store: this.whereConfigStore
             });
-            var whatDataView = this._whatCataView = this._createDataView();
+            var whatDataView = this._whatDataView = this._createDataView();
             whatDataView.startup();
             whatDataView.set("model", whatModel);
             var whereDataView = this._whereDataView = this._createDataView();
