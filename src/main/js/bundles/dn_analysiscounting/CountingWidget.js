@@ -68,8 +68,8 @@ define([
                     maxHeight: this.maxComboBoxHeight
                 }, this._selectNode1);
             }, this);
-            var cvStoreData = this._getStoreData(this.source.whatStores);
-            ct_when(cvStoreData, function (storeData) {
+            var whatStoreData = this._getStoreData(this.source.whatStores);
+            ct_when(whatStoreData, function (storeData) {
                 var storesStore = new Memory({
                     data: storeData
                 });
