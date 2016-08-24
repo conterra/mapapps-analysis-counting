@@ -105,6 +105,9 @@ define([
             }, this);
         },
         _getStoreData: function (stores) {
+            var stores = d_array.filter(stores, function(store) {
+                return !!store;
+            });
             return ct_async.join(d_array.map(stores, function (s) {
                 return s.getMetadata();
             })).then(function (metadata) {
