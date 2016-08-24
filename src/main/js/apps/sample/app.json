@@ -73,27 +73,6 @@
           "id": "_AGS_STORE_1447515012761"
         },
         {
-          "title": "Kreise 2015 (Deutschland Kreisgrenzen 2015)",
-          "description": "",
-          "omniSearchLabelAttr": "RS",
-          "omniSearchSearchAttr": "RS",
-          "idProperty": "OBJECTID",
-          "url": "http://services.arcgis.com/OLiydejKCZTGhvWg/ArcGIS/rest/services/Kreisegrenzen_2015_Statistik/FeatureServer/0",
-          "useIn": [
-            "omnisearch",
-            "selection"
-          ],
-          "filterOptions": {
-            "suggestContains": true
-          },
-          "omniSearchTypingDelay": 500,
-          "omniSearchPageSize": 20,
-          "omniSearchDefaultLabel": "Suchbegriff eingeben...",
-          "fetchIdProperty": true,
-          "enablePagination": false,
-          "id": "_AGS_STORE_1447515265638"
-        },
-        {
           "title": "Gemeindegrenzen 2015 (Deutschland Gemeindegrenzen 2015)",
           "description": "",
           "omniSearchLabelAttr": "RS",
