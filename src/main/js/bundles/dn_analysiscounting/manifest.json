@@ -4,7 +4,7 @@
   "Bundle-Name": "${bundleName}",
   "Bundle-Description": "${bundleDescription}",
   "Bundle-Vendor": "con terra GmbH",
-    "Product-Name": "devnet-mapapps-analysis-counting",
+  "Product-Name": "devnet-mapapps-analysis-counting",
   "Config-Bundle-Location": "/config",
   "Require-Bundle": [
     {
