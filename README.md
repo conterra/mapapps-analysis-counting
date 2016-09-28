@@ -20,6 +20,7 @@ Installation Guide
 ------------------
 - Just add the bundle "dn_analysiscounting" to your app.
 
+####Configurable Components:
 ```
 "dn_analysiscounting": {
   "CountingWidgetFactory": {
