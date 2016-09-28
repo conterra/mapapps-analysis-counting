@@ -19,3 +19,22 @@ Change the mapapps.remote.base in the build.properties file and run:
 Installation Guide
 ------------------
 - Just add the bundle "dn_analysiscounting" to your app.
+
+```
+"dn_analysiscounting": {
+  "CountingWidgetFactory": {
+    "whereStoreIds": [
+      "_AGS_STORE_1447515012761",
+      "_AGS_STORE_1447515265638",
+      "_AGS_STORE_1447515368626",
+      "_AGS_STORE_1469027163329",
+      "_AGS_STORE_1469027174072",
+      "_AGS_STORE_1469027182634"
+    ],
+    "whatStoreIds": [
+      "_AGS_STORE_1446801354388",
+      "_AGS_STORE_1469026369117"
+    ]
+  }
+}
+```
