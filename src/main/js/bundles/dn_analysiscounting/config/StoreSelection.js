@@ -32,7 +32,6 @@ define(["dojo/_base/lang", "dojo/_base/declare", "dojo/_base/array", "ct/_lang",
                     var widget = this._widget = new StoreSelectionWidget(opts);
                     this.connectP("model", widget._whatViewModel, "selectedIds", function (type, oldVal, newVal) {
                         var whereStoreIds = this._getComponentConfig().properties.whereStoreIds;
-                        debugger
                         widget.fireConfigChangeEvent({
                             whatStoreIds: newVal,
                             whereStoreIds: whereStoreIds
