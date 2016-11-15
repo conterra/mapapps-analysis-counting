@@ -8,13 +8,16 @@
   "Config-Bundle-Location": "/config",
   "Require-Bundle": [
     {
-      "name": "map"
+      "name": "map",
+       "version": "^3.6.0"
     },
     {
-      "name": "agssearch"
+      "name": "agssearch",
+      "version": "^3.6.0"
     },
     {
-      "name": "resultcenter"
+      "name": "resultcenter",
+      "version": "^3.6.0"
     }
   ],
   "CSS-Themes-Extension": [
