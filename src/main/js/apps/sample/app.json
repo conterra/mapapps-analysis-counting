@@ -1,7 +1,7 @@
 {
   "properties": {
     "title": "Analysis / Counting Sample",
-    "amdPackages": "apprt@^3.6.0"
+    "amdPackages": "apprt@^3.2.1"
   },
   "load": {
     "bundleLocations": [
@@ -9,22 +9,22 @@
       "bundles"
     ],
     "allowedBundles": [
-      "custominfo@^3.6.0",
-      "dataform@^3.6.0",
-      "parametermanager@^3.6.0",
-      "splashscreen@^3.6.0",
-      "toolset@^3.6.0",
-      "windowmanager@^3.6.0",
-      "contentviewer@^3.6.0",
-      "map@^3.6.0",
-      "legend@^3.6.0",
-      "agssearch@^3.6.0",
-      "system@^3.6.0",
-      "templatelayout@^3.6.0",
-      "templates@^3.6.0",
-      "themes@^3.6.0",
-      "banner@^3.6.0",
-      "wizard@^3.6.0",
+      "custominfo@^3.2.1",
+      "dataform@^3.2.1",
+      "parametermanager@^3.2.1",
+      "splashscreen@^3.2.1",
+      "toolset@^3.2.1",
+      "windowmanager@^3.2.1",
+      "contentviewer@^3.2.1",
+      "map@^3.2.1",
+      "legend@^3.2.1",
+      "agssearch@^3.2.1",
+      "system@^3.2.1",
+      "templatelayout@^3.2.1",
+      "templates@^3.2.1",
+      "themes@^3.2.1",
+      "banner@^3.2.1",
+      "wizard@^3.2.1",
       "dn_analysiscounting"
     ]
   },
