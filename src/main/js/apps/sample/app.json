@@ -29,6 +29,60 @@
     ]
   },
   "bundles": {
+    "dn_analysiscounting": {
+      "CountingWidgetFactory": {
+        "whereStoreIds": [
+          "_AGS_STORE_1447515012761",
+          "_AGS_STORE_1447515265638",
+          "_AGS_STORE_1447515368626",
+          "_AGS_STORE_1469027163329",
+          "_AGS_STORE_1469027174072",
+          "_AGS_STORE_1469027182634"
+        ],
+        "whatStoreIds": [
+          "_AGS_STORE_1446801354388",
+          "_AGS_STORE_1469026369117"
+        ]
+      }
+    },
+    "banner": {
+      "BannerWidget": {
+        "label": "Developer Network",
+        "image": "https://www.conterra.de/~/media/conterra/images/site_logos/conterra-logo.ashx",
+        "imagePosition": "above",
+        "link": "http://developernetwork.conterra.de/"
+      }
+    },
+    "custominfo": {
+      "CustomInfoToggleTool": [
+        {
+          "id": "customInfoTool",
+          "activateOnStartup": true,
+          "title": "Information",
+          "tooltip": "Information",
+          "iconClass": "icon-custom-info-info",
+          "toolClass": "ctInfo",
+          "togglable": true,
+          "widgetSettings": {
+            "content": "This app shows the functionality of the Analysis / Counting Bundle which allows you to count features and display the results in the map.<br><br> Please klick on the button in the top left corner. Then you can select the feature, which shouldbe counted and the area the features should be in.If you zoom out you'll see Graphs and the numbers of features in the region you selected. ",
+            "window": {
+              "marginBox": {
+                "w": 300,
+                "h": 170,
+                "l": 25,
+                "b": 70
+              },
+              "title": "Information",
+              "draggable": true,
+              "closable": true,
+              "modal": false,
+              "maximizable": false,
+              "resizable": false
+            }
+          }
+        }
+      ]
+    },
     "agssearch": {
       "AGSStore": [
         {
@@ -181,49 +235,7 @@
       ],
       "enabled": true
     },
-    "banner": {
-      "BannerWidget": {
-        "label": "Developer Network",
-        "image": "https://www.conterra.de/~/media/conterra/images/site_logos/conterra-logo.ashx",
-        "imagePosition": "above",
-        "link": "http://developernetwork.conterra.de/"
-      }
-    },
-    "console": {
-      "enabled": true
-    },
-    "contentviewer": {
-      "enabled": true
-    },
-    "coordinatetransformer": {
-      "enabled": true
-    },
-    "custominfo": {
-      "enabled": true
-    },
     "dataform": {
-      "enabled": true
-    },
-    "dn_analysiscounting": {
-      "CountingWidgetFactory": {
-        "whereStoreIds": [
-          "_AGS_STORE_1447515012761",
-          "_AGS_STORE_1447515265638",
-          "_AGS_STORE_1447515368626",
-          "_AGS_STORE_1469027163329",
-          "_AGS_STORE_1469027174072",
-          "_AGS_STORE_1469027182634"
-        ],
-        "whatStoreIds": [
-          "_AGS_STORE_1446801354388",
-          "_AGS_STORE_1469026369117"
-        ]
-      }
-    },
-    "infoviewer": {
-      "enabled": true
-    },
-    "legend": {
       "enabled": true
     },
     "map": {
@@ -549,34 +561,10 @@
       },
       "enabled": true
     },
-    "mapflow": {
-      "enabled": true
-    },
-    "maptip": {
-      "enabled": true
-    },
-    "mobiletoc": {
-      "enabled": true
-    },
-    "mobileview": {
-      "enabled": true
-    },
-    "notifier": {
-      "enabled": true
-    },
-    "parametermanager": {
-      "enabled": true
-    },
     "selection": {
       "SelectionAction": {
         "autoDeactivateTool": true
       },
-      "enabled": true
-    },
-    "splashscreen": {
-      "enabled": true
-    },
-    "templatelayout": {
       "enabled": true
     },
     "templates": {
@@ -637,9 +625,6 @@
           }
         ]
       },
-      "enabled": true
-    },
-    "windowmanager": {
       "enabled": true
     }
   }
