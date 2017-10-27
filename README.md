@@ -3,7 +3,7 @@ The Analysis / Counting Bundle allows you to count features and display the resu
 
 Sample App
 ------------------
-http://www.mapapps.de/mapapps/resources/apps/downloads_analysis_counting/index.html
+https://demos.conterra.de/mapapps/resources/apps/downloads_analysis_counting/index.html
 
 Installation Guide
 ------------------
