@@ -50,7 +50,7 @@
         "label": "Developer Network",
         "image": "https://www.conterra.de/~/media/conterra/images/site_logos/conterra-logo.ashx",
         "imagePosition": "above",
-        "link": "http://developernetwork.conterra.de/"
+        "link": "https://developernetwork.conterra.de/"
       }
     },
     "custominfo": {
@@ -91,7 +91,7 @@
           "omniSearchLabelAttr": "Name",
           "omniSearchSearchAttr": "Name",
           "idProperty": "OBJECTID",
-          "url": "http://water.discomap.eea.europa.eu/arcgis/rest/services/BathingWater/BathingWater_Dyna_WM/MapServer/3",
+          "url": "https://water.discomap.eea.europa.eu/arcgis/rest/services/BathingWater/BathingWater_Dyna_WM/MapServer/3",
           "useIn": [
             "omnisearch",
             "selection"
@@ -112,7 +112,7 @@
           "omniSearchLabelAttr": "RS",
           "omniSearchSearchAttr": "RS",
           "idProperty": "OBJECTID",
-          "url": "http://services.arcgis.com/OLiydejKCZTGhvWg/ArcGIS/rest/services/Bundesländergrenzen_2015_Statistik/FeatureServer/0",
+          "url": "https://services.arcgis.com/OLiydejKCZTGhvWg/ArcGIS/rest/services/Bundesländergrenzen_2015_Statistik/FeatureServer/0",
           "useIn": [
             "omnisearch",
             "selection"
@@ -133,7 +133,7 @@
           "omniSearchLabelAttr": "RS",
           "omniSearchSearchAttr": "RS",
           "idProperty": "OBJECTID",
-          "url": "http://services.arcgis.com/OLiydejKCZTGhvWg/ArcGIS/rest/services/Gemeindegrenzen_2015/FeatureServer/0",
+          "url": "https://services.arcgis.com/OLiydejKCZTGhvWg/ArcGIS/rest/services/Gemeindegrenzen_2015/FeatureServer/0",
           "useIn": [
             "omnisearch",
             "selection"
@@ -154,7 +154,7 @@
           "omniSearchLabelAttr": "CITY_NAME",
           "omniSearchSearchAttr": "CITY_NAME",
           "idProperty": "FID",
-          "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/World_Cities/FeatureServer/0",
+          "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/World_Cities/FeatureServer/0",
           "useIn": [
             "omnisearch",
             "selection"
@@ -175,7 +175,7 @@
           "omniSearchLabelAttr": "COUNTRY",
           "omniSearchSearchAttr": "COUNTRY",
           "idProperty": "FID",
-          "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Countries/FeatureServer/0",
+          "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Countries/FeatureServer/0",
           "useIn": [
             "omnisearch",
             "selection"
@@ -196,7 +196,7 @@
           "omniSearchLabelAttr": "CONTINENT",
           "omniSearchSearchAttr": "CONTINENT",
           "idProperty": "FID",
-          "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Continents/FeatureServer/0",
+          "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Continents/FeatureServer/0",
           "useIn": [
             "omnisearch",
             "selection"
@@ -217,7 +217,7 @@
           "omniSearchLabelAttr": "REGION",
           "omniSearchSearchAttr": "REGION",
           "idProperty": "FID",
-          "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Regions/FeatureServer/0",
+          "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Regions/FeatureServer/0",
           "useIn": [
             "omnisearch",
             "selection"
@@ -289,11 +289,6 @@
                       "enabled": true
                     }
                   ],
-                  "category": {
-                    "title": "Topographische Karte",
-                    "description": "Eine topographische Weltkarte",
-                    "imgUrl": "http://localhost:8080/ct-mapapps-webapp-3.0.1/js/bundles/mapcore/map/config/styles/images/defaultCover.png"
-                  },
                   "id": "worldtopo_1437731843967"
                 }
               ]
@@ -338,7 +333,7 @@
           "services": [
             {
               "id": "worldimage",
-              "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+              "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
               "type": "AGS_TILED",
               "title": "Luftbild",
               "description": "Luftbildaufnahmen der gesamten Welt",
@@ -363,7 +358,7 @@
             },
             {
               "id": "worldtopo",
-              "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
+              "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
               "type": "AGS_TILED",
               "title": "Topographische Karte",
               "description": "Eine topographische Weltkarte",
@@ -429,7 +424,7 @@
             {
               "id": "streets",
               "description": "Eine detaillierte Stra\u00DFenkarte",
-              "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
+              "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
               "type": "AGS_TILED",
               "title": "Stra\u00DFen",
               "layers": [
@@ -441,7 +436,7 @@
             },
             {
               "id": "service_48769",
-              "url": "http://water.discomap.eea.europa.eu/arcgis/rest/services/BathingWater/BathingWater_Dyna_WM/MapServer",
+              "url": "https://water.discomap.eea.europa.eu/arcgis/rest/services/BathingWater/BathingWater_Dyna_WM/MapServer",
               "type": "AGS_DYNAMIC",
               "title": "State of bathing waters",
               "description": "Map shows monitoring water locations and quality of bathing water from 2004 till 2014. \n\nFor the scale 1:5.000.001 and less detailed, data are aggregated by country. In such case, stacked bars show percentage of bathing water quality for coastal and inland waters together. For the scale range 1:5.000.000 to 1:700,001, individual bathing water sites (points) are visible instead of classified stacked charts and are coloured according to the classification of bathing water quality. Symbol size depends on the map scale (in more detailed map scales symbols are bigger). For the scales 1:700,000 and more detailed, symbol of bather in a square appears instead of points. All symbols (charts, circles and squares with bather) are coloured according to achieved quality status.\n \nAssessment is done according to assessment rules of the Directive 2006/7/EC (classification into categories Excellent, Good, Sufficient...) and of the Directive76/160/EEC (classification into categories CG, CI, NC...). Monitoring requirements such as the taking of a pre-season sample, a minimum of four samples per season and a minimum of one sample per month must be met for all bathing waters. If these rules are satisfied, the bathing water is categorised as 'sampling frequency satisfied'. If at least one monitoring requirement is not fulfilled the bathing water is categorised as 'sampling frequency not satisfied'. In such cases, bathing water can still be quality assessed if at least four samples per season (three samples if the season does not exceed eight weeks or the region is subject to special geographical constraints) are available and are more or less equally distributed throughout the season. Assessment of bathing water quality is possible when the bathing-water sample dataset is available for four consecutive seasons. Bathing waters are accordingly classified to one of the bathing-water quality classes (excellent, good, sufficient, or poor). If intestinal enterococci and Escherichia coli sample datasets for four consecutive seasons are not yet available, the assessment of bathing water quality is made by using the data from the latest year only. In this case, the assessment of bathing water quality is conducted under a set of transitional rules.\n\nData source: <a href='http://www.eea.europa.eu/data-and-maps/data/bathing-water-directive-status-of-bathing-water-7'> http://www.eea.europa.eu/data-and-maps/data/bathing-water-directive-status-of-bathing-water-7</a>",
@@ -498,7 +493,7 @@
             },
             {
               "id": "service_99120",
-              "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/World_Cities/FeatureServer",
+              "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/World_Cities/FeatureServer",
               "type": "AGS_FEATURE",
               "title": "World Cities",
               "description": "",
@@ -513,7 +508,7 @@
             },
             {
               "id": "service_63588",
-              "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Countries/FeatureServer",
+              "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Countries/FeatureServer",
               "type": "AGS_FEATURE",
               "title": "World Countries",
               "description": "",
@@ -528,7 +523,7 @@
             },
             {
               "id": "service_70883",
-              "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Continents/FeatureServer",
+              "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Continents/FeatureServer",
               "type": "AGS_FEATURE",
               "title": "World Continents",
               "description": "",
@@ -543,7 +538,7 @@
             },
             {
               "id": "service_64259",
-              "url": "http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Regions/FeatureServer",
+              "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/World_Regions/FeatureServer",
               "type": "AGS_FEATURE",
               "title": "World Regions",
               "description": "",
